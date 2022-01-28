@@ -16,28 +16,28 @@ type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18, 'DAI', 'Dai Stablecoin')
-export const USDC = new Token(ChainId.MAINNET, '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', 6, 'USDC', 'USD//C')
-export const USDT = new Token(ChainId.MAINNET, '0xdAC17F958D2ee523a2206206994597C13D831ec7', 6, 'USDT', 'Tether USD')
-export const COMP = new Token(ChainId.MAINNET, '0xc00e94Cb662C3520282E6f5717214004A7f26888', 18, 'COMP', 'Compound')
-export const MKR = new Token(ChainId.MAINNET, '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2', 18, 'MKR', 'Maker')
-export const AMPL = new Token(ChainId.MAINNET, '0xD46bA6D942050d489DBd938a2C909A5d5039A161', 9, 'AMPL', 'Ampleforth')
-export const WBTC = new Token(ChainId.MAINNET, '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', 18, 'WBTC', 'Wrapped BTC')
-export const SUSHI = new Token(ChainId.MAINNET, '0x6B3595068778DD592e39A122f4f5a5cF09C90fE2', 18, 'SUSHI', 'SushiToken')
-export const YAM = new Token(ChainId.MAINNET, '0x0e2298E3B3390e3b945a5456fBf59eCc3f55DA16', 18, 'YAM', 'YAM')
-export const RUNE = new Token(ChainId.MAINNET, '0x3155BA85D5F96b2d030a4966AF206230e46849cb', 18, 'RUNE', 'RUNE.ETH')
-export const YFI = new Token(ChainId.MAINNET, '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e', 18, 'YFI', 'Yearn')
-export const CREAM = new Token(ChainId.MAINNET, '0x2ba592F78dB6436527729929AAf6c908497cB200', 18, 'CREAM', 'Cream')
-export const BAC = new Token(ChainId.MAINNET, '0x3449FC1Cd036255BA1EB19d65fF4BA2b8903A69a', 18, 'BAC', 'Basis Cash')
-export const FXS = new Token(ChainId.MAINNET, '0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0', 18, 'FXS', 'Frax Share')
+export const DAI = new Token(ChainId.STANDALONE, '0xc9baa8cfdde8e328787e29b4b078abf2dadc2055', 18, 'DAI', 'Dai Stablecoin')
+export const USDC = new Token(ChainId.STANDALONE, '0x980a5afef3d17ad98635f6c5aebcbaeded3c3430', 6, 'USDC', 'USD//C')
+export const USDT = new Token(ChainId.STANDALONE, '0x0039f574ee5cc39bdd162e9a88e3eb1f111baf48', 6, 'USDT', 'Tether USD')
+export const COMP = new Token(ChainId.STANDALONE, '0x16c4106966ce30e06e806a7c40eefb46d84ce7e5', 18, 'COMP', 'Compound')
+export const MKR = new Token(ChainId.STANDALONE, '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2', 18, 'MKR', 'Maker')
+export const AMPL = new Token(ChainId.STANDALONE, '0xD46bA6D942050d489DBd938a2C909A5d5039A161', 9, 'AMPL', 'Ampleforth')
+export const WBTC = new Token(ChainId.STANDALONE, '0xfa93c12cd345c658bc4644d1d4e1b9615952258c', 18, 'WBTC', 'Wrapped BTC')
+export const SUSHI = new Token(ChainId.STANDALONE, '0xe0a60890bb7f9250089455620063fb6fe4dc159a', 18, 'SUSHI', 'SushiToken')
+export const YAM = new Token(ChainId.STANDALONE, '0x0e2298E3B3390e3b945a5456fBf59eCc3f55DA16', 18, 'YAM', 'YAM')
+export const RUNE = new Token(ChainId.STANDALONE, '0x3155BA85D5F96b2d030a4966AF206230e46849cb', 18, 'RUNE', 'RUNE.ETH')
+export const YFI = new Token(ChainId.STANDALONE, '0xdfa3ef49d357c6b0b2dfbb88701af2b7a053fd0a', 18, 'YFI', 'Yearn')
+export const CREAM = new Token(ChainId.STANDALONE, '0x2ba592F78dB6436527729929AAf6c908497cB200', 18, 'CREAM', 'Cream')
+export const BAC = new Token(ChainId.STANDALONE, '0x3449FC1Cd036255BA1EB19d65fF4BA2b8903A69a', 18, 'BAC', 'Basis Cash')
+export const FXS = new Token(ChainId.STANDALONE, '0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0', 18, 'FXS', 'Frax Share')
 export const CRV = new Token(
-  ChainId.MAINNET,
-  '0xD533a949740bb3306d119CC777fa900bA034cd52',
+  ChainId.STANDALONE,
+  '0x4500e16da66b99e0c55d7b46ebbd59bc413ba171',
   18,
   'CRV',
   'Curve Dao Token'
 )
-export const ALPHA = new Token(ChainId.MAINNET, '0x0490C1076552ed3C91876EaD9F6a547B389e69d4', 9, 'ALPHA', 'AlphaToken')
+export const ALPHA = new Token(ChainId.STANDALONE, '0x0490C1076552ed3C91876EaD9F6a547B389e69d4', 9, 'ALPHA', 'AlphaToken')
 
 const WDEV_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WDEV[ChainId.MAINNET]],
@@ -50,8 +50,8 @@ const WDEV_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WDEV_ONLY,
-  [ChainId.MAINNET]: [
-    ...WDEV_ONLY[ChainId.MAINNET],
+  [ChainId.STANDALONE]: [
+    ...WDEV_ONLY[ChainId.STANDALONE],
     DAI,
     USDC,
     USDT,
@@ -72,28 +72,28 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
  * tokens.
  */
 export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: Token[] } } = {
-  [ChainId.MAINNET]: {
-    [AMPL.address]: [DAI, WDEV[ChainId.MAINNET]],
+  [ChainId.STANDALONE]: {
+    [AMPL.address]: [DAI, WDEV[ChainId.STANDALONE]],
   },
 }
 
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WDEV_ONLY,
-  [ChainId.MAINNET]: [...WDEV_ONLY[ChainId.MAINNET], DAI, USDC, USDT],
+  [ChainId.STANDALONE]: [...WDEV_ONLY[ChainId.STANDALONE], DAI, USDC, USDT],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WDEV_ONLY,
-  [ChainId.MAINNET]: [...WDEV_ONLY[ChainId.MAINNET], DAI, USDC, USDT],
+  [ChainId.STANDALONE]: [...WDEV_ONLY[ChainId.STANDALONE], DAI, USDC, USDT],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
-  [ChainId.MAINNET]: [
+  [ChainId.STANDALONE]: [
     [
-      new Token(ChainId.MAINNET, '0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643', 8, 'cDAI', 'Compound Dai'),
-      new Token(ChainId.MAINNET, '0x39AA39c021dfbaE8faC545936693aC917d5E7563', 8, 'cUSDC', 'Compound USD Coin'),
+      new Token(ChainId.STANDALONE, '0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643', 8, 'cDAI', 'Compound Dai'),
+      new Token(ChainId.STANDALONE, '0x39AA39c021dfbaE8faC545936693aC917d5E7563', 8, 'cUSDC', 'Compound USD Coin'),
     ],
     [USDC, USDT],
     [DAI, USDT],
