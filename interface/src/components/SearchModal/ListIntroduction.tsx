@@ -30,7 +30,7 @@ export default function ListIntroduction({ onSelectList }: { onSelectList: () =>
             alt="token-list-preview"
           />
           <Text style={{ marginBottom: '8px', textAlign: 'center' }}>
-            DCTDEX supports token lists. You can add your own custom lists via IPFS, HTTPS and ENS.{' '}
+            AlphaSwap supports token lists. You can add your own custom lists via IPFS, HTTPS and ENS.{' '}
           </Text>
           <ButtonPrimary onClick={onSelectList} id="list-introduction-choose-a-list">
             {t('chooseAList')}
@@ -38,7 +38,7 @@ export default function ListIntroduction({ onSelectList }: { onSelectList: () =>
           <OutlineCard style={{ marginBottom: '8px', padding: '1rem' }}>
             <Text fontWeight={400} fontSize={14} style={{ textAlign: 'center' }}>
               Token lists are an{' '}
-              <ExternalLink href="https://github.com/uniswap/token-lists">open specification</ExternalLink>. Check out{' '}
+              <ExternalLink href="https://github.com/cusdt-LINK/alpha-swap-token-list">open specification</ExternalLink>. Check out{' '}
               <ExternalLink href="https://tokenlists.org">tokenlists.org</ExternalLink> to learn more.
             </Text>
           </OutlineCard>
