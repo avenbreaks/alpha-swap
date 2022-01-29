@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/37396827-3981-436c-8335-c019c101ff73/deploy-status)](https://app.netlify.com/sites/awesome-ride-a20cdd/deploys)
+
+
 ---
 description: 'Build on Alpha Swap, need help? let us know.'
 ---
