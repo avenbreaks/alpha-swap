@@ -566,7 +566,7 @@ export default function RemoveLiquidity({
                               currencyB === DEV ? WDEV[chainId].address : currencyIdB
                             }`}
                           >
-                            Receive WDEV
+                            Receive WKCS
                           </StyledInternalLink>
                         ) : oneCurrencyIsWDEV ? (
                           <StyledInternalLink
@@ -574,7 +574,7 @@ export default function RemoveLiquidity({
                               currencyA && currencyEquals(currencyA, WDEV[chainId]) ? 'ETH' : currencyIdA
                             }/${currencyB && currencyEquals(currencyB, WDEV[chainId]) ? 'ETH' : currencyIdB}`}
                           >
-                            Receive DEV
+                            Receive KCS
                           </StyledInternalLink>
                         ) : null}
                       </RowBetween>
