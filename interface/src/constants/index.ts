@@ -5,7 +5,7 @@ import { routerv2 } from '../moonbase_address.json'
 import { injected, walletconnect } from '../connectors'
 //fortmatic, portis, walletconnect, walletlink, lattice
 export const ROUTER_ADDRESS: { [key: string]: string } = {
-  [ChainId.STANDALONE]: '0x83DDB667807A3e2d13428d47F740D3940EdF2b59',
+  [ChainId.STANDALONE]: '0x89d85E010dDa6e6b50A27be4D3015e8BC832d42b',
   [ChainId.MOONROCK]: routerv2,
   [ChainId.MOONBASE]: routerv2,
   [ChainId.MOONSHADOW]: routerv2,
