@@ -94,7 +94,7 @@ export default function Menu() {
       {open && (
         <MenuFlyout>
           <MenuItem id="link" href="https://info.alphadao.money">
-            <AutoGraph size={14} />
+            <Home size={14} />
             {t('Analytics')}
           </MenuItem>
           <MenuItem id="link" href="https://t.me/alphadao1337">
