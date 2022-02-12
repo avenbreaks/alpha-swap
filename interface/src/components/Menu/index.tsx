@@ -93,9 +93,9 @@ export default function Menu() {
       </StyledMenuButton>
       {open && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://alphadao.money">
-            <Home size={14} />
-            {t('Website')}
+          <MenuItem id="link" href="https://info.alphadao.money">
+            <AutoGraph size={14} />
+            {t('Analytics')}
           </MenuItem>
           <MenuItem id="link" href="https://t.me/alphadao1337">
             <MessageCircle size={14} />
