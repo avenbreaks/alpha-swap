@@ -224,7 +224,7 @@ export default function FullPositionCard({ pair, border }: PositionCardProps) {
             </FixedHeightRow>
 
             <AutoRow justify="center" marginTop={'10px'}>
-              <ExternalLink href={`https://info.alphadao.money/pairs/${pair.liquidityToken.address}`}>View pool information ↗</ExternalLink>
+              <ExternalLink href={`https://info.alphadao.money/pairs`}>View pool information ↗</ExternalLink>
             </AutoRow>
             <RowBetween marginTop="10px">
               <ButtonSecondary as={Link} to={`/add/${currencyId(currency0)}/${currencyId(currency1)}`} width="48%">

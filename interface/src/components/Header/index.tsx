@@ -11,9 +11,8 @@ import { useActiveWeb3React } from '../../hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
 
 import { YellowCard } from '../Card'
-import Settings from '../Settings'
-import Menu from '../Menu'
-
+import { ExternalLink } from '../../theme'
+import { Terminal, Send, BarChart } from "react-feather";
 import { RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
 // import VersionSwitch from './VersionSwitch'
@@ -105,12 +104,19 @@ const HeaderControls = styled.div`
     align-items: flex-end;
   `};
 `
+const NavbarItem = styled.div`
+    flex: 1;
+    align-items: left;
+    display: flex;
+    justify-content: space-evenly;
+  `
 
 const BalanceText = styled(Text)`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     display: none;
   `};
 `
+
 
 const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.MAINNET]: null,
@@ -135,7 +141,21 @@ export default function Header() {
               <img style={{ height: 50 }} src={Logo} alt="logo" />
             </UniIcon>
           </Title>
-        </HeaderElement>
+          </HeaderElement>
+          <NavbarItem>
+          <ExternalLink style={{color: 'white'}} href={`https://github.com/alphadao-money`}>
+            {('Github')}
+            <Terminal size={20} />
+          </ExternalLink>
+          <ExternalLink style={{color: 'white'}} href={`https://t.me/alphadao1337`}>
+            {('Telegram')}
+            <Send size={20} />
+          </ExternalLink>
+          <ExternalLink style={{color: 'white'}} href={`https://info.alphadao.money`}>
+            {('Charts')}
+            <BarChart size={20} />
+          </ExternalLink>
+        </NavbarItem>
         <HeaderControls>
           <HeaderElement>
             <TestnetWrapper>
@@ -152,8 +172,6 @@ export default function Header() {
           </HeaderElement>
           <HeaderElementWrap>
             {/* <VersionSwitch /> */}
-            <Settings />
-            <Menu />
           </HeaderElementWrap>
         </HeaderControls>
       </RowBetween>
