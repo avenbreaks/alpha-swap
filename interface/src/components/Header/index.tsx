@@ -41,7 +41,6 @@ const HeaderElement = styled.div`
 const HeaderElementWrap = styled.div`
   display: flex;
   align-items: center;
-
   ${({ theme }) => theme.mediaWidth.upToSmall`
     margin-top: 0.5rem;
 `};
@@ -53,7 +52,6 @@ const Title = styled.a`
   pointer-events: auto;
   text-decoration: none;
   text-decoration-style: unset;
-
   :hover {
     cursor: pointer;
   }
@@ -67,7 +65,6 @@ const AccountElement = styled.div<{ active: boolean }>`
   border-radius: 12px;
   white-space: nowrap;
   width: 100%;
-
   :focus {
     border: 1px solid blue;
   }
@@ -98,7 +95,6 @@ const HeaderControls = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-
   ${({ theme }) => theme.mediaWidth.upToSmall`
     flex-direction: column;
     align-items: flex-end;
@@ -132,49 +128,98 @@ export default function Header() {
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
   //const [isDark] = useDarkModeManager()
 
-  return (
-    <HeaderFrame>
-      <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
-        <HeaderElement>
-          <Title href=".">
-            <UniIcon>
-              <img style={{ height: 50 }} src={Logo} alt="logo" />
-            </UniIcon>
-          </Title>
-          </HeaderElement>
-          <NavbarItem>
-          <ExternalLink style={{color: 'white'}} href={`https://github.com/alphadao-money`}>
-            {('Github')}
-            <Terminal size={20} />
-          </ExternalLink>
-          <ExternalLink style={{color: 'white'}} href={`https://t.me/alphadao1337`}>
-            {('Telegram')}
-            <Send size={20} />
-          </ExternalLink>
-          <ExternalLink style={{color: 'white'}} href={`https://info.alphadao.money`}>
-            {('Charts')}
-            <BarChart size={20} />
-          </ExternalLink>
-        </NavbarItem>
-        <HeaderControls>
+  if ( isMobile ) {
+    return (
+      <HeaderFrame>
+        <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
           <HeaderElement>
-            <TestnetWrapper>
-              {!isMobile && chainId && NETWORK_LABELS[chainId] && <NetworkCard>{NETWORK_LABELS[chainId]}</NetworkCard>}
-            </TestnetWrapper>
-            <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
-              {account && userEthBalance ? (
-                <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
-                  {userEthBalance?.toSignificant(4)} KCS
-                </BalanceText>
-              ) : null}
-              <Web3Status />
-            </AccountElement>
-          </HeaderElement>
-          <HeaderElementWrap>
-            {/* <VersionSwitch /> */}
-          </HeaderElementWrap>
-        </HeaderControls>
-      </RowBetween>
-    </HeaderFrame>
-  )
-}
+            <Title href=".">
+              <UniIcon>
+                <img style={{ height: 50 }} src={Logo} alt="logo" />
+              </UniIcon>
+            </Title>
+            </HeaderElement>
+            <NavbarItem>
+            <ExternalLink style={{color: 'white'}} href={`https://github.com/alphadao-money`}>
+              {('')}
+              <Terminal size={20} />
+            </ExternalLink>
+            <ExternalLink style={{color: 'white'}} href={`https://t.me/alphadao1337`}>
+              {('')}
+              <Send size={20} />
+            </ExternalLink>
+            <ExternalLink style={{color: 'white'}} href={`https://info.alphadao.money`}>
+              {('')}
+              <BarChart size={20} />
+            </ExternalLink>
+          </NavbarItem>
+          <HeaderControls>
+            <HeaderElement>
+              <TestnetWrapper>
+                {!isMobile && chainId && NETWORK_LABELS[chainId] && <NetworkCard>{NETWORK_LABELS[chainId]}</NetworkCard>}
+              </TestnetWrapper>
+              <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
+                {account && userEthBalance ? (
+                  <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
+                    {userEthBalance?.toSignificant(4)} KCS
+                  </BalanceText>
+                ) : null}
+                <Web3Status />
+              </AccountElement>
+            </HeaderElement>
+            <HeaderElementWrap>
+              {/* <VersionSwitch /> */}
+            </HeaderElementWrap>
+          </HeaderControls>
+        </RowBetween>
+      </HeaderFrame>
+    )
+  } else {
+    return (
+      <HeaderFrame>
+        <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
+          <HeaderElement>
+            <Title href=".">
+              <UniIcon>
+                <img style={{ height: 50 }} src={Logo} alt="logo" />
+              </UniIcon>
+            </Title>
+            </HeaderElement>
+            <NavbarItem>
+            <ExternalLink style={{color: 'white'}} href={`https://github.com/alphadao-money`}>
+              {('Github')}
+              <Terminal size={20} />
+            </ExternalLink>
+            <ExternalLink style={{color: 'white'}} href={`https://t.me/alphadao1337`}>
+              {('Telegram')}
+              <Send size={20} />
+            </ExternalLink>
+            <ExternalLink style={{color: 'white'}} href={`https://info.alphadao.money`}>
+              {('Charts')}
+              <BarChart size={20} />
+            </ExternalLink>
+          </NavbarItem>
+          <HeaderControls>
+            <HeaderElement>
+              <TestnetWrapper>
+                {!isMobile && chainId && NETWORK_LABELS[chainId] && <NetworkCard>{NETWORK_LABELS[chainId]}</NetworkCard>}
+              </TestnetWrapper>
+              <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
+                {account && userEthBalance ? (
+                  <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
+                    {userEthBalance?.toSignificant(4)} KCS
+                  </BalanceText>
+                ) : null}
+                <Web3Status />
+              </AccountElement>
+            </HeaderElement>
+            <HeaderElementWrap>
+              {/* <VersionSwitch /> */}
+            </HeaderElementWrap>
+          </HeaderControls>
+        </RowBetween>
+      </HeaderFrame>
+    )
+  }
+ }
+
