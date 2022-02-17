@@ -1,6 +1,6 @@
 {
-  "short_name": "DCTDEX",
-  "name": "DCTDEX",
+  "short_name": "AlphaSwap",
+  "name": "AlphaSwap",
   "icons": [
     {
       "src": "./logo.png",
@@ -11,6 +11,6 @@
   ],
   "orientation": "portrait",
   "display": "standalone",
-  "theme_color": "#ff007a",
+  "theme_color": "#FFFFFF",
   "background_color": "#fff"
 }
