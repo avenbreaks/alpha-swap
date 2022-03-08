@@ -5,7 +5,7 @@ import { Text } from 'rebass'
 
 import styled from 'styled-components'
 
-import Logo from '../../assets/images/mainlogo.png'
+import Logo from '../../assets/images/mainlogo.svg'
 import { useActiveWeb3React } from '../../hooks'
 //import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
@@ -135,7 +135,7 @@ export default function Header() {
           <HeaderElement>
             <Title href=".">
               <UniIcon>
-                <img style={{ height: 50 }} src={Logo} alt="logo" />
+                <img style={{ height: 70 }} src={Logo} alt="logo" />
               </UniIcon>
             </Title>
             </HeaderElement>
@@ -181,7 +181,7 @@ export default function Header() {
           <HeaderElement>
             <Title href=".">
               <UniIcon>
-                <img style={{ height: 50 }} src={Logo} alt="logo" />
+                <img style={{ height: 70 }} src={Logo} alt="logo" />
               </UniIcon>
             </Title>
             </HeaderElement>
